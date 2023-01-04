@@ -29,7 +29,24 @@ namespace LinkedList
             }
             //Display LinkedList Data
             Console.WriteLine("{0} inserted into the Linked List", node.data);
-            
+        }
+        //Display LinkedList Data through Method
+        public void Display()
+        {
+            //Head is Null then List is empty
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    Console.WriteLine("Linked List Data is : " + temp.data);
+                    temp = temp.next;
+                }
+            }
         }
     }
 }
